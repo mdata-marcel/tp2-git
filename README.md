@@ -215,6 +215,16 @@ git config --global user.name "John Doe"
 git config --global user.email johndoe@example.com
 ```
 
+## Resynchroniser votre fork
+
+Si le repo original tu TP2 (upstream en anglais) recoit des modifications, alors votre fork vous affichera un message similaire a: `This branch is 1 commit behind HETIC-DevOps-2024/tp2-git:main.`
+
+Appuyez sur le bouton `Sync Fork`.
+
+Il est possible re le synchroniser egalement avec le terminal en suivant:
+  - https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/configuring-a-remote-repository-for-a-fork
+  - https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork#syncing-a-fork-branch-from-the-command-line
+
 ## Travail collaboratif
 
 Arrangez vous maintenant en groupes de 2 ou 3 pour la suite du TP.
