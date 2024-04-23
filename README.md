@@ -13,6 +13,77 @@ Dans ce workshop vous allez
   - Creer et resoudre des confltits de merge
   - Apprendre a resoudre les conflits
 
+## Rappel sur les commandes de terminal
+
+Liste non exhaustive de commandes de terminal utiles:
+
+### Lister un repertoire ou un fichier
+
+`ls <nom_du_repertoire | nom_du_fichier>`
+
+Exemple:
+```
+❯ ls .ssh
+total 104
+ 480519 drwx------  11 jdel  staff   352B Apr 13 16:09 .
+ 263916 drwxr-x---+ 56 jdel  staff   1.8K Apr 23 14:24 ..
+1018810 -rw-r--r--@  1 jdel  staff   493B Mar  9 12:44 config
+7199345 -rw-------   1 jdel  staff   3.3K Apr  9 17:11 id_rsa
+7199346 -rw-r--r--   1 jdel  staff   736B Apr  9 17:11 id_rsa.pub
+7419498 -rw-------   1 jdel  staff   8.9K Apr 17 14:08 known_hosts
+```
+
+### Les characteres speciauz dans le terminal
+
+- Le charactere `~` signifie votre repertoire utilisateur, equivalent a la variable d'environment $HOME
+
+- Le charactere `.` dans le terminal
+  - `.` peut signifier le repertoire courant: `ls ./quelquechose`
+  - `.` devant un nom de repertoire en fait un repertoire cache: `.ssh`
+  - `.` comme commande est equivalente a `source`: `. ~/.zshrc` = `source ~/.zshrc`
+
+### Afficher le contenu d'un fichier
+
+`cat <nom_du_fichier>`
+
+Exemple:
+```
+❯ cat .ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCi99UOjitlzX7DkXQIzb2/Om0d0f7pqY45JNiqw96uh+6zImzzE3aQ6aSPBmGk0Mqdf/NYkrjEi/iMymluhET3urAcE51fGJt2zhPL0xqztQH3jJ7XRodzuWhvNXmPNpiYF15BeD2PLGkOXUy6HuKoU21g9VKyJhJMbSdz2TJHXVHketPngYc/.....+uP7/E5cYQMd4wD0qnhscnUWapcbZKemXeNVynKCv6/i2XQVpv9Vn2iiWrdKu2vJux2KxfWySUi8JPb2crT579/rpvTa5NEvwB3LxnQv9Ol5MbnZzQkPig3XQxT0SteiBOWuFwWE5GQhEU2grKumfPNg8LlJ7JtJcs6bV1ANrfde/mkz9aEqM4+/uULv+Jdy8R56RwSEj+Qm1hylV7VZsaVw== jdel@jwork
+```
+
+Remonter d'un repertoire `cd ..`
+
+Revenir a la racine du home `cd`
+
+### Ouvrir le finder (Mac uniquement)
+
+`open <nom_du_repertoire>`
+
+### Ouvrir avec VSCode
+
+`code <nom_du_repertoire | nom_du_fichier>`
+
+Sur Mac, dans VSCode CMD + Shift + P puis taper `SHELL`.
+
+Selectionner "Install 'code' in command PATH". Mettre un mot de passe admin. Redemarrer le terminal.
+
+### Supprimer un fichier ou repertoire
+
+:warning: Il n'y a pas de corbeille ni de CTRL + Z !
+
+Supprimer un fichier `rm <nom_du_fichier>`
+
+Supprimer un repertoire `rm -rf <nom_du_repertoire>`
+
+### Creer un alias terminal
+
+`alias g="git"`
+
+Uniquement valable pour la session en cours.
+
+L'ecrire dans votre fichier `~/.zshrc` pour rendre l'alias permanent.
+
 ## Etape 1 - Installer le client Git
 
 Suivre les instructions officielles Pour votre platforme specifique.
@@ -128,3 +199,7 @@ Cela signifie que vous etes a jour avec la branche `main` du repository distant.
 Arrangez vous maintenant en groupes de 2 ou 3 pour la suite du TP.
 
 To be continued
+
+## Tout d'abord Git config
+
+Nom et email arbitraire, problematique -> Signature des commits avec GPG
