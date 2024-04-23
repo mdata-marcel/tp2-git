@@ -17,6 +17,10 @@ Dans ce workshop vous allez
 
 Liste non exhaustive de commandes de terminal utiles:
 
+### Afficher le repertoire courant
+
+`pwd` Affiche le repertoire courant
+
 ### Lister un repertoire ou un fichier
 
 `ls <nom_du_repertoire | nom_du_fichier>`
@@ -55,6 +59,12 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCi99UOjitlzX7DkXQIzb2/Om0d0f7pqY45JNiqw96u
 Remonter d'un repertoire `cd ..`
 
 Revenir a la racine du home `cd`
+
+### Creer un repertoire
+
+`mkdir <nom_du_repertoire>`
+
+Cree un repertoire dans le repertoire courant
 
 ### Ouvrir le finder (Mac uniquement)
 
@@ -194,12 +204,19 @@ nothing to commit, working tree clean
 
 Cela signifie que vous etes a jour avec la branche `main` du repository distant.
 
+## Tout d'abord Git config
+
+Le nom et email chosis sont arbitraire, ce qui est problematique
+
+Cela a entraine la signature des commits avec GPG pour la plupart des gros projets open source.
+
+```
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+```
+
 ## Travail collaboratif
 
 Arrangez vous maintenant en groupes de 2 ou 3 pour la suite du TP.
 
 To be continued
-
-## Tout d'abord Git config
-
-Nom et email arbitraire, problematique -> Signature des commits avec GPG
